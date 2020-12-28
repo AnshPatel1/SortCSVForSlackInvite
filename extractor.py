@@ -81,9 +81,14 @@ def generate_invite_list(lists):
     return invite_list
 
 
+def store_mail_list_to_file(email_list):
+    with open('invite_list.txt', 'w') as list_file:
+        list_file.write(email_list)
+
+
 if __name__ == "__main__":
-    sorted_list = extract_emails_as_list('form-data.csv')
+    sorted_list = extract_emails_as_list('form.csv')
     # generate_excel(sorted_list)
     # for n in find_students_without_github(sorted_list):
     #     print(n)
-    print(generate_invite_list(sorted_list))
+    store_mail_list_to_file(generate_invite_list(sorted_list))
