@@ -87,7 +87,7 @@ def store_mail_list_to_file(email_list):
 
 
 if __name__ == "__main__":
-    sorted_list = extract_emails_as_list('/Users/anshpatel/Downloads/form.csv')
+    sorted_list = extract_emails_as_list('form.csv')
     # generate_excel(sorted_list)
     # for n in find_students_without_github(sorted_list):
     #     print(n)
